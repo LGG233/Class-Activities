@@ -1,0 +1,15 @@
+a {
+    color: aqua;
+}
+
+a:hover {
+    color: #777777;
+}
+
+a:active {
+    color: #000;
+}
+
+a:visited {
+    color: #ec0e0e;
+}
