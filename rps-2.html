@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+</head>
+
+<body>
+
+  <div id="game">
+
+  </div>
+
+  <script type="text/javascript">
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["r", "p", "s"];
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function (event) {
+
+      // Determines which key was pressed.
+      var userGuess = event.key;
+
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+      console.log(userGuess);
+      console.log(computerGuess);
+      // Alerts the key the user pressed (userGuess).
+      alert("User guess: " + userGuess);
+
+      // Alerts the Computer's guess.
+      alert("Computer guess: " + computerGuess);
+
+      console.log(userGuess);
+      console.log(computerGuess);
+      var computerScore = 0;
+      var userScore = 0;
+      for (var c = 0; c < 5; c++) {
+        if (computerGuess == userGuess) {
+          alert("Tie!");
+        }
+        else if (computerGuess == "r") {
+          if (userGuess == "s") {
+            alert("Computer wins!");
+            computerScore = computerScore++;
+          }
+          else {
+            alert("User wins!");
+            userScore = userScore++;
+          }
+        }
+          else if (computerGuess == "p") {
+            if (userGuess == "s") {
+              alert("User wins!");
+              userScore = userScore++;
+            }
+            else {
+              alert("Computer wins!");
+              computerScore = computerScore++;
+            }
+          }
+          else if (computerGuess == "s") {
+            if (userGuess == "r") {
+              alert("User wins!");
+              userScore = userScore++;
+            }
+            else {
+              alert("Computer wins!");
+              computerScore = computerScore++;
+            }
+          }
+        }
+      }
+  </script>
+
+</body>
+
+</html>
